@@ -1,0 +1,189 @@
+:root {
+    --cor-fundo: #ffffff;
+    --cor-texto: #1a1a1a;
+    --cor-destaque: #4b63ff;
+    --cor-bloco: #f4f5f7;
+}
+
+body.dark-mode {
+    --cor-fundo: #0e0f10;
+    --cor-texto: #e7e7e7;
+    --cor-destaque: #7d9bff;
+    --cor-bloco: #1a1c20;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    /* background: var(--cor-fundo); */
+    background-image: url(https://cdn.prod.website-files.com/5f99af042b09ff1fd9a2a772/603fd350e1ca0936d273c69b_thinking-ai-humanoid-robot-analyzing-information-data.png);
+    background-size: cover;
+    background-attachment: fixed;/* deixa imagem fixa no fundo */
+    color: var(--cor-texto);
+    transition: background .3s ease, color .3s ease;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 70px;
+    background: var(--cor-fundo);
+    backdrop-filter: blur (10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    box-shadow: 0 2px 8px #00000062;
+}
+
+#toggle-mode {
+    padding: 0.5rem 0.5rem;
+    border-radius: 6px;
+    border: 1px solid #00000026;
+    background: var(--cor-bloco);
+    font-weight: 600;
+    transition: background .3s ease;
+}
+
+main {
+    padding: 100px 2rem 2rem;
+    max-width: 900px;
+    margin: auto;
+}
+
+.secao {
+    margin: 2rem 0;
+    padding: 2rem;
+    background: var(--cor-bloco);
+    border-radius: 14px;
+    box-shadow: 0 4px 12px #00000093;
+    transition: background .3s ease;
+}
+
+h2 {
+    margin-top: 0;
+    font-size: 1.5rem;
+    color: var(--cor-destaque);
+}
+
+p {
+    line-height: 1.5;
+    font-size: 1.05rem;
+}
+
+.hero {
+    padding: 4rem 2rem;
+    text-align: center;
+    background: linear-gradient(140deg, var(--cor-destaque), #1e3c7c);
+    color: #fff;
+    border-radius: 18px;
+    margin-bottom: 2rem;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin: 0 0 1rem 0;
+}
+
+.hero p {
+    max-width: 650px;
+    margin: auto;
+    font-size: 1.2rem;
+}
+
+.tabela-container {
+    margin-top: 1.5rem;
+    overflow-x: auto;
+}
+
+.tabela-ia {
+    width: 100%;
+    /* border: 1px solid black; */
+    font-size: 1rem;
+    min-width: 600px;
+    overflow: hidden;
+    border-collapse: collapse;
+    /* remove assobras de espaço entre as bordas; */
+}
+
+.tabela-ia thead {
+    background: var(--cor-destaque);
+    color: #fff;
+    /* border: 1px solid black; */
+}
+
+.tabela-ia th,
+.tabela-ia td {
+    /* border: 1px solid black; */
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid black;
+}
+
+.tabela-ia tbody tr:hover {
+    background: #0000000d;
+    transform: translateX(-2px);
+
+}
+
+.tabela-ia tbody tr {
+    transition: background .25s ease, transform .15s ease;
+}
+
+.botao-tema {
+    position: relative;
+    width: 55px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #00000055;
+    overflow: hidden;
+    transition: background .3s ease;
+}
+
+.botao-tema span {
+    position: absolute;
+    font-size: 1.2rem;
+    transition: opacity 0.3s ease, transforme 0.3s ease;
+}
+
+.icone-sol {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.icone-lua {
+    opacity: 0;
+    transform: scale(1.5);
+   
+}
+
+body.dark-mode .icone-sol {
+    opacity: 0;
+    transform:  scale(1.5);
+    
+}
+
+body.dark-mode .icone-lua {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+body.dark-mode header {
+    background:#141414b3;
+}
+
+body.dark-mode .tabela-ia td {
+    border-bottom: 1px solid #ffffff14;
+}
+
+body.dark-mode .tabela-ia tbody tr:hover{
+    background: #ffffff0d;
+}
+
+body.dark-mode{
+    background-image: url(https://webi.com.br/wp-content/uploads/2023/12/exemplos-de-inteligencia-artificial.png);
+}

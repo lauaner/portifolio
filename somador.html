@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somador</title>
+
+    <!-- -------------------CSS --------------------->
+
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #ce6995;
+            background-color: #ce699549;
+        }
+
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0px 6px 22px #ce6995;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 18px;
+            margin: 0 0 12px;
+        }
+
+        .campo {
+            display: flex;
+            gap: 8px;
+            margin: 12px 0;
+        }
+
+        input[type="number"] {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #ce6995;
+            border-radius: 8px;
+            outline: none;
+            font-size: 16px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            border: 0;
+            border-radius: 8px;
+            background-color: #ce6995;
+            color: #fff;
+            font-weight: 600;
+            cursor: pointer;
+
+        }
+
+        .resultado {
+            margin-top: 12px;
+            font-size: 18px;
+            font-weight: 700;
+            color: #ce6995;
+        }
+
+        .erro {
+            margin-top: 12px;
+            font-size: 18px;
+            font-weight: 700;
+            color: red;
+        }
+    </style>
+</head>
+
+
+<body>
+
+
+    <div class="container">
+        <h1>Somador Rápido</h1>
+        <div class="campo">
+            <input type="number" name="" id="valor1" class="input-valor" placeholder="Primeiro Valor" step="any">
+            <input type="number" name="" id="valor2" class="input-valor" placeholder="Segundo Valor" step="any">
+            <!-- step="x" pula p numeral de acordo com numero que quer 2 em 2 3 em 3 etc se não quiser definir colocar 1 ou any -->
+        </div>
+
+        <button id="btnSomar"> Somar </button>
+
+        <div id="mensagem" class="erro"> </div>
+        <div id="resultado" class="resultado"> </div>
+
+    </div>
+
+    <!-- ------------------- JAVA --------------------->
+
+    <script>
+
+        function valido(n) {
+            return n !== '' && !Number.isNaN(Number(n));
+            // return n 
+            // !== diferente
+            // '' vazio zero
+            // && e
+            // !Numbernão é numero
+            // .isNaN(Number(n)); 
+        }
+
+
+        function somar() {
+            const v1 = document.getElementById("valor1").value.trim();
+            const v2 = document.getElementById("valor2").value.trim();
+
+            const msgEl = document.getElementById("mensagem");
+            const resEl = document.getElementById("resultado");
+
+
+
+            msgEl.textContent = '';
+            resEl.textContent = '';
+
+            if (!valido(v1) || !valido(v2)) {
+                msgEl.textContent = 'Preencha os dois campos com números válidos.';
+                return;
+            }
+
+            const n1 = parseFloat(v1);
+            const n2 = parseFloat(v2);
+            const soma = n1 + n2;
+            resEl.textContent = 'Resultado: ' + soma.toString();
+
+        }
+
+        document.getElementById('btnSomar').addEventListener('click', somar);
+        document.querySelectorAll('.input-valor').forEach(input => {
+            input.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter') somar();
+            });
+        });
+
+
+    </script>
+
+
+
+
+
+
+
+</body>
+
+</html>

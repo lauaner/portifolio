@@ -1,0 +1,128 @@
+.galeria{   
+    
+    margin: 10rem;
+    height: 33em;
+    gap: 0.5em;
+    display: flex;
+}
+
+.galeria div{
+    flex: 2.5;
+    background-size:cover;
+    background-position: center top;
+    transition: all 0.3s cubic-bezier(.1,.69,.91,.13);
+}
+
+.galeria div:hover{
+    /* border-radius:  50px 50px 0 0; */
+    flex: 2.7;
+    background-position: center bottom;
+}
+
+.galeria:hover div:not(:hover){
+    filter: opacity(20%);
+}
+
+
+/*.galeria:hover div:not(:hover){
+ filter:blur(5px) ;
+ filter:sepia(100%) ; 
+}
+
+ body{
+    cursor: url("img/11zon_xptoo-80.cur"), auto;
+} */
+
+
+
+
+ @media (max-width:1280px) {
+.galeria{
+    margin: 2rem;
+    height: 25em;
+    gap: 0.5em;
+    display: flex;
+}
+
+.galeria div{
+    flex: 2.1;
+    background-size:cover;
+    background-position: center top;
+    transition: all 0.3s cubic-bezier(.1,.69,.91,.13);
+}
+
+.galeria div:hover{
+    /* border-radius:  50px 50px 0 0; */
+    flex: 2.3;
+    background-position: center bottom;
+}
+
+.galeria:hover div:not(:hover){
+    
+    filter: opacity(20%);
+}
+
+} 
+
+
+
+
+
+
+ @media (max-width:1024px) {
+.galeria{
+    margin: 2rem;
+    height: 15em;
+    gap: 0.5em;
+    display: flex;
+}
+
+.galeria div{
+    flex: 1.5;
+    background-size:cover;
+    background-position: center top;
+    transition: all 0.3s cubic-bezier(.1,.69,.91,.13);
+}
+
+.galeria div:hover{
+    /* border-radius:  50px 50px 0 0; */
+    flex: 1.8;
+    background-position: center bottom;
+}
+
+.galeria:hover div:not(:hover){
+    
+    filter: opacity(20%);
+}
+
+} 
+
+
+
+ @media (max-width:390px) {
+.galeria{
+    margin: 2rem;
+    height: 6em;
+    gap: 0.5em;
+    display: flex;
+}
+
+.galeria div{
+    flex: 2;
+    background-size:cover;
+    background-position: center top;
+    transition: all 0.3s cubic-bezier(.1,.69,.91,.13);
+}
+
+.galeria div:hover{
+    /* border-radius:  50px 50px 0 0; */
+    flex: 2;
+    background-position: center bottom;
+}
+
+.galeria:hover div:not(:hover){
+    
+    filter: opacity(20%);
+}
+
+} 
